@@ -10,7 +10,15 @@
 
 //Write a program to add two numbers with error handling
 
+// function sum(a:number, b:number):number {   //explicitly specified datatype, so error handling
+//     return a+b
+// }
+// console.log(sum(5, 10));    //Result is 15
+
+
+
+//@ts-ignore    //this will ignore the *DUPLICATE FUNCTION IMPLEMENTATION* error.
 function sum(a:number, b:number):number {   //explicitly specified datatype, so error handling
     return a+b
 }
-console.log(sum(5, 10));    //Result is 15
+console.log(sum(5, 10));
