@@ -27,7 +27,23 @@ console.log(nanValue);
 // let sentence: string = "Learning typescript from youtube"
 // console.log(sentence.length)
 var text = "need something badly";
-var uppercase = text.toLocaleUpperCase();
-var lowercase = text.toLocaleLowerCase();
-console.log(uppercase);
-console.log(lowercase);
+var uppercase = text.toUpperCase();
+var lowercase = text.toLowerCase();
+// let uppercase:string = text.toLocaleUpperCase();
+// let lowercase:string = text.toLocaleLowerCase()
+console.log(uppercase); //same output for both
+console.log(lowercase); //same output for both
+// 1: Substring:
+var longText = "This is a long sentence.";
+var shortText = longText.substring(0, 10);
+console.log(shortText);
+// 2: String Comparison:
+var str1 = "Hello";
+var str2 = "World";
+var areEqual = str1 === str2;
+console.log(areEqual);
+// 3: String Template:
+var product = "Phone";
+var price = 500;
+var message = "The product ".concat(product, " is priced at ").concat(price, " dollars.");
+console.log(message);
