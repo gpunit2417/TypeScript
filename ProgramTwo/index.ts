@@ -18,10 +18,10 @@
 
 
 //@ts-ignore    //this will ignore the *DUPLICATE FUNCTION IMPLEMENTATION* error.
-function sum(a:number, b:number):number {   //explicitly specified datatype, so error handling
-    return a+b
-}
-console.log(sum(5, 10));
+// function sum(a:number, b:number):number {   //explicitly specified datatype, so error handling
+//     return a+b
+// }
+// console.log(sum(5, 10));
 
 
 
@@ -42,3 +42,13 @@ console.log(sum(5, 10));
 //on running tsc index.ts command, an error is shown but index.js file is created.
 //so to prevent creation of index.js file, we will run command *tsc --noEmitOnError index.ts*
 //On running above command, no index.js file is constructed.
+
+
+
+//we can create the above simple function using fat arrow function as: 
+
+//@ts-ignore
+const sum = (a:number, b:number):number => {   //explicitly specified datatype, so error handling
+    return a+b
+}
+console.log(sum(5, 10));    //Result is 15
