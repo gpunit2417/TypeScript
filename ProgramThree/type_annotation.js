@@ -18,10 +18,16 @@ var myNeg = -5;
 // let invalidResult: number = "123"
 // let computedValue: number = Math.sqrt(16)   //valid result
 var nanValue = NaN;
+console.log(nanValue);
 //String type
-var myFirstName = "PUNIT";
-var myLastName = "GOYAL";
-var myFullName = myFirstName + myLastName;
-console.log(myFullName);
-var sentence = "Learning typescript from youtube";
-console.log(sentence.length);
+// let myFirstName:string = "PUNIT"
+// let myLastName: string = "GOYAL"
+// let myFullName: string = myFirstName + myLastName
+// console.log(myFullName)
+// let sentence: string = "Learning typescript from youtube"
+// console.log(sentence.length)
+var text = "need something badly";
+var uppercase = text.toLocaleUpperCase();
+var lowercase = text.toLocaleLowerCase();
+console.log(uppercase);
+console.log(lowercase);

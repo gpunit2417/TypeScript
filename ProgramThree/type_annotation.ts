@@ -33,18 +33,28 @@ let myNeg: number = -5
 
 
 let nanValue: number = NaN
+console.log(nanValue)
 
 
 //String type
 
-let myFirstName:string = "PUNIT"
-let myLastName: string = "GOYAL"
+// let myFirstName:string = "PUNIT"
+// let myLastName: string = "GOYAL"
+// let myFullName: string = myFirstName + myLastName
+// console.log(myFullName)
 
-let myFullName: string = myFirstName + myLastName
-console.log(myFullName)
+
+// let sentence: string = "Learning typescript from youtube"
+// console.log(sentence.length)
 
 
-let sentence: string = "Learning typescript from youtube"
-console.log(sentence.length)
+let text: string = "need something badly"
+let uppercase:string = text.toUpperCase();
+let lowercase:string = text.toLowerCase()
 
+// let uppercase:string = text.toLocaleUpperCase();
+// let lowercase:string = text.toLocaleLowerCase()
+
+console.log(uppercase); //same output for both
+console.log(lowercase); //same output for both
 
