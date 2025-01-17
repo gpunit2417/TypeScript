@@ -22,3 +22,11 @@ function sum(a:number, b:number):number {   //explicitly specified datatype, so 
     return a+b
 }
 console.log(sum(5, 10));
+
+
+
+//TS configuration file
+// - This file contains many in-built commands
+// we will ensure if our ts file contains any error, then on executing it no js file creates.
+//for this, we will run *tsc --init* command which will create a tsconfig file
+//After that, search for emiton in tsconfig.json file and uncomment it.
