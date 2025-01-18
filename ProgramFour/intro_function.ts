@@ -46,9 +46,20 @@
 
 //Palindrome string
 
-const palindrome = (palin: string): boolean => {
-    let newPlaindrome = palin.split("").reverse().join("")
-    return newPlaindrome === palin
-}
+// const palindrome = (palin: string): boolean => {
+//     let newPlaindrome = palin.split("").reverse().join("")
+//     return newPlaindrome === palin
+// }
 
-console.log(palindrome("12321"))
+// console.log(palindrome("12321"))
+
+
+//calculate Average of numbers
+
+const calculateAverage = (myarr: number[]) => {
+    const sum =  myarr.reduce((accumulator: number, currentVal: number) =>  accumulator + currentVal);
+    return sum/(myarr.length)
+ }
+ 
+ const average = calculateAverage([6, 8, 11, 10, 15, 12]);
+ console.log("Average of numbers :", average); 

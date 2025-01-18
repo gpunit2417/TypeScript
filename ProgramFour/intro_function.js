@@ -25,8 +25,15 @@
 // const myGreet = greet("Monika", 2)
 // console.log(myGreet);
 //Palindrome string
-var palindrome = function (palin) {
-    var newPlaindrome = palin.split("").reverse().join("");
-    return newPlaindrome === palin;
+// const palindrome = (palin: string): boolean => {
+//     let newPlaindrome = palin.split("").reverse().join("")
+//     return newPlaindrome === palin
+// }
+// console.log(palindrome("12321"))
+//calculate Average of numbers
+var calculateAverage = function (myarr) {
+    var sum = myarr.reduce(function (accumulator, currentVal) { return accumulator + currentVal; });
+    return sum / (myarr.length);
 };
-console.log(palindrome("12321"));
+var average = calculateAverage([6, 8, 11, 10, 15, 12]);
+console.log("Average of numbers :", average);
