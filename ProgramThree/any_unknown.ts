@@ -33,3 +33,18 @@ if(typeof num1 === "number"){
 else if(typeof num1 === "boolean"){
     console.log(num1);
 }
+
+
+// async function fetchData(): Promise<unknown> {
+//     const response = await fetch("http://api.example.com/data")
+//     const data = await response.json()
+//     return data
+// }
+
+// async function processData() {
+//     const response = await fetchData()
+
+//     if(typeof response === "object"){
+//         //perform operation that you want to do on response object
+//     }
+// }
