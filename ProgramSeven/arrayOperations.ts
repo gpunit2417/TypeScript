@@ -17,10 +17,17 @@ const arr1 = ["Punit", "Sakshi", "Atul", "Monika"]
 // console.log(arr1);
 
 
-//Access elements using for loops
+//Access elements using loops
 
 //1. for loop
 
-for(let i=0; i<arr1.length; i++){
-    console.log(i + arr1[i]);
-}
+// for(let i=0; i<arr1.length; i++){
+//     console.log(i + arr1[i]);
+// }
+
+
+//2. for...of loop
+
+// for(const name of arr1){
+//     console.log(name);
+// }
