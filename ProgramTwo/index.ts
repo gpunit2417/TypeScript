@@ -51,4 +51,5 @@
 const sum = (a:number, b:number):number => {   //explicitly specified datatype, so error handling
     return a+b
 }
+//@ts-ignore
 console.log(sum(5, 10));    //Result is 15
