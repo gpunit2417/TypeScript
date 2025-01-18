@@ -30,9 +30,22 @@
 // console.log(findMaxValue1([4, 2, 42, 2, 3]));
 //practice question for map
 //1. uppercase of a string array containing names
-var namedArray = ["Punit", "goyal", "purohit"];
-var uppercasedArray = namedArray.map(function (curr) { return curr.toUpperCase(); });
-console.log(uppercasedArray);
-var numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var squaredArray = numberArray.map(function (curValue) { return curValue * curValue; });
-console.log(squaredArray);
+// const namedArray = ["Punit", "goyal", "purohit"]
+// const uppercasedArray = namedArray.map((curr: string) => curr.toUpperCase())
+// console.log(uppercasedArray);
+//2. square of each number from a numbered array
+// const numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const squaredArray = numberArray.map((curValue: number) => curValue * curValue)
+// console.log(squaredArray);
+//practice question for filter
+//1. length of array value greater than four
+var names = ["Alice", "Bob", "Andrew", "Alex", "Anna"];
+var nameGreaterFour = names.map(function (curName) { return curName.length > 4; });
+console.log(nameGreaterFour);
+var nameWithGreaterThanFourLetter = names.filter(function (current) { return current.length > 4; });
+console.log(nameWithGreaterThanFourLetter);
+//2. names starting with 'A'
+var namesWithA = names.map(function (currentName) { return currentName.startsWith("A"); });
+console.log(namesWithA);
+var nameStartingWithA = names.filter(function (curr) { return curr.startsWith('A'); });
+console.log(nameStartingWithA);

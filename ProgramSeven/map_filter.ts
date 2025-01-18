@@ -55,6 +55,29 @@
 // console.log(uppercasedArray);
 
 
+//2. square of each number from a numbered array
 // const numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // const squaredArray = numberArray.map((curValue: number) => curValue * curValue)
 // console.log(squaredArray);
+
+
+//practice question for filter
+
+//1. length of array value greater than four
+
+const names: string[] = ["Alice", "Bob", "Andrew", "Alex", "Anna"]
+const nameGreaterFour = names.map((curName: string) => curName.length > 4)
+console.log(nameGreaterFour);
+
+
+const nameWithGreaterThanFourLetter = names.filter((current: string) => current.length > 4)
+console.log(nameWithGreaterThanFourLetter);
+
+
+//2. names starting with 'A'
+const namesWithA = names.map((currentName: string) => currentName.startsWith("A"))
+console.log(namesWithA);
+
+
+const nameStartingWithA = names.filter((curr: string) => curr.startsWith('A'))
+console.log(nameStartingWithA);
