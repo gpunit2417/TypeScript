@@ -26,8 +26,22 @@ const arr1 = ["Punit", "Sakshi", "Atul", "Monika"]
 // }
 
 
-//2. for...of loop
+//2. for...of loop          //iterates over array values
 
 // for(const name of arr1){
 //     console.log(name);
 // }
+
+
+//3. for...in loop          //iterates over array indices
+
+// for(const name in arr1){
+//     console.log(arr1[name]);
+// }
+
+
+//4. forEach loop
+
+// arr1.forEach((element: string) => {
+//     console.log(element);
+// });

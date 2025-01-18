@@ -17,7 +17,14 @@ var arr1 = ["Punit", "Sakshi", "Atul", "Monika"];
 //     console.log(i + arr1[i]);
 // }
 //2. for...of loop
-for (var _i = 0, arr1_1 = arr1; _i < arr1_1.length; _i++) {
-    var name_1 = arr1_1[_i];
-    console.log(name_1);
-}
+// for(const name of arr1){
+//     console.log(name);
+// }
+//3. for...in loop
+// for(const name in arr1){
+//     console.log(arr1[name]);
+// }
+//4. forEach loop
+arr1.forEach(function (element) {
+    console.log(element);
+});
