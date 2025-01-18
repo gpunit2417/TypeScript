@@ -35,9 +35,20 @@
 // greet("Punit", 1)
 
 
-const greet = (name: string, id: number) => {
-    return `Welcome, ${name}. Your id is ${id}`
+// const greet = (name: string, id: number) => {
+//     return `Welcome, ${name}. Your id is ${id}`
+// }
+
+// const myGreet = greet("Monika", 2)
+// console.log(myGreet);
+
+
+
+//Palindrome string
+
+const palindrome = (palin: string): boolean => {
+    let newPlaindrome = palin.split("").reverse().join("")
+    return newPlaindrome === palin
 }
 
-const myGreet = greet("Monika", 2)
-console.log(myGreet);
+console.log(palindrome("12321"))

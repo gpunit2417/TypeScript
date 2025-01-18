@@ -19,8 +19,14 @@
 //     console.log(`Welcome, ${name}. Your id is ${id}`);
 // }
 // greet("Punit", 1)
-var greet = function (name, id) {
-    return "Welcome, ".concat(name, ". Your id is ").concat(id);
+// const greet = (name: string, id: number) => {
+//     return `Welcome, ${name}. Your id is ${id}`
+// }
+// const myGreet = greet("Monika", 2)
+// console.log(myGreet);
+//Palindrome string
+var palindrome = function (palin) {
+    var newPlaindrome = palin.split("").reverse().join("");
+    return newPlaindrome === palin;
 };
-var myGreet = greet("Monika", 2);
-console.log(myGreet);
+console.log(palindrome("12321"));
