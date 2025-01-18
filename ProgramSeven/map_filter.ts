@@ -81,3 +81,12 @@ console.log(namesWithA);
 
 const nameStartingWithA = names.filter((curr: string) => curr.startsWith('A'))
 console.log(nameStartingWithA);
+
+
+
+//In the above two questions, using map and filter is logging different outputs.
+//map outputs the data in the form of true and false
+//true in case of successful conditions satisfying
+//else false
+
+//filter return the actual data
