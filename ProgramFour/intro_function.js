@@ -31,9 +31,18 @@
 // }
 // console.log(palindrome("12321"))
 //calculate Average of numbers
-var calculateAverage = function (myarr) {
-    var sum = myarr.reduce(function (accumulator, currentVal) { return accumulator + currentVal; });
-    return sum / (myarr.length);
-};
-var average = calculateAverage([6, 8, 11, 10, 15, 12]);
-console.log("Average of numbers :", average);
+// const calculateAverage = (myarr: number[]) => {
+//     const sum =  myarr.reduce((accumulator: number, currentVal: number) =>  accumulator + currentVal);
+//     return sum/(myarr.length)
+//  }
+//  const average = calculateAverage([6, 8, 11, 10, 15, 12]);
+//  console.log("Average of numbers :", average); 
+//find max number
+function findMaxValue(numbers) {
+    return Math.max.apply(Math, numbers);
+}
+// Example usage:
+var numbers = [10, 20, 30, 40, 41];
+//@ts-ignore
+var maxValue = findMaxValue(numbers);
+console.log("Maximum Value:", maxValue);
