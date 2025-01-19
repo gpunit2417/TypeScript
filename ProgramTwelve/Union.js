@@ -10,10 +10,10 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var user = { name: "Punit", age: 22 };
-var myLocation = { city: "Hisar", country: "India" };
-var completeDetails = function (usr, loc) {
-    return __assign(__assign({}, user), myLocation);
+var userDetail = { name: "Punit Goyal", id: 123, email: "punit@123gmail.com" };
+var accountDetail = { accId: 12, accountType: 'saving', balance: 25000 };
+var completeAccDetails = function (userDetail, accountDetail) {
+    return __assign(__assign({}, userDetail), accountDetail);
 };
-var myCompleteDetail = completeDetails(user, myLocation);
-console.log(myCompleteDetail);
+var completeUserAccountDetails = completeAccDetails(userDetail, accountDetail);
+console.log(completeUserAccountDetails);
