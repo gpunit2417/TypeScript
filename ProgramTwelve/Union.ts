@@ -50,6 +50,37 @@
 // In union, we have to define every property of atleast one type aliased function and can define one or more property of other type aliased function.
 
 
+// type person = {
+//     name: string, 
+//     age: number
+// }
+
+// type Employee = {
+//     id: number,
+//     dept: string
+// }
+
+// type EmployeeDetails = person | Employee
+
+// // both are acceptable in UNION
+// const employee: EmployeeDetails = {
+//     // name: "Punit",
+//     age: 22,
+//     id: 11212505,
+//     dept: "CSE"
+// }
+
+// const employee1: EmployeeDetails = {
+//     name: "Punit",
+//     age: 22,
+//     id: 11212505,
+//     dept: "CSE"
+// }
+
+
+//Intersection in TS
+//intersection using objects
+
 type person = {
     name: string, 
     age: number
@@ -60,22 +91,21 @@ type Employee = {
     dept: string
 }
 
-type EmployeeDetails = person | Employee
+type EmployeeDetails = person & Employee
 
-// both are acceptable in UNION
-const employee: EmployeeDetails = {
-    // name: "Punit",
-    age: 22,
-    id: 11212505,
-    dept: "CSE"
-}
+//not acceptable in intersection as not all properties are defined
+// const employee: EmployeeDetails = {
+//     // name: "Punit",
+//     age: 22,
+//     id: 11212505,
+//     dept: "CSE"
+// }
 
+
+//acceptable in intersection as all properties are defined
 const employee1: EmployeeDetails = {
     name: "Punit",
     age: 22,
     id: 11212505,
     dept: "CSE"
 }
-
-
-//Intersection in TS
