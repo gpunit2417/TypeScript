@@ -1,6 +1,8 @@
 //In TS, tuples are the data structure that allows you to store a fixed-size collection of data of different types. They are similar to arrays, but with a key difference: the type of elements in a tuple are fixed and declared at the time of creation and arrays can hold elements of same type, and their sizes can vary.
 
-// type PersonInfo = readonly [number, string, boolean]
+// readonly keyword is used to diminish the chance of any updation in the tuple as tuple is immutable in nature
+
+// type PersonInfo = readonly [number, string, boolean]     
 
 // const display = (person: PersonInfo) => {
 //     const [age, name, hasDrivingLicense] = person
