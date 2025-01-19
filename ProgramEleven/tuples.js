@@ -1,25 +1,12 @@
 //In TS, tuples are the data structure that allows you to store a fixed-size collection of data of different types. They are similar to arrays, but with a key difference: the type of elements in a tuple are fixed and declared at the time of creation and arrays can hold elements of same type, and their sizes can vary.
-var disprod = function (info) {
-    var prname = info[0], price = info[1], quantity = info[2];
-    console.log("Product name: ".concat(prname, ", Price ").concat(price, ", Quantity ").concat(quantity));
+var average = function (student) {
+    var subname1 = student[0], grade1 = student[1], subname2 = student[2], grade2 = student[3], subname3 = student[4], grade3 = student[5];
+    console.log("Subject name: ".concat(subname1, ", Grade: ").concat(grade1, ", \n             Subject name: ").concat(subname2, ", Grade: ").concat(grade2, ", \n             Subject name: ").concat(subname3, ", Grade: ").concat(grade3));
+    var vari = (grade1 + grade2 + grade3) / 3;
+    console.log("The average is:", vari.toFixed(2));
 };
-var prod1 = ["Soap", 25, 9];
-var prod2 = ["Hairbrush", 89, 21];
-disprod(prod1);
-disprod(prod2);
-// Question 2:
-// type SubjectGrade = [string, number, string, number, string, number]
-// const average = (student:SubjectGrade):void =>
-//     {
-//  const [subname1, grade1, subname2, grade2, subname3, grade3] = student;
-//  console.log(`Subject name: ${subname1}, Grade: ${grade1}, 
-//              Subject name: ${subname2}, Grade: ${grade2}, 
-//              Subject name: ${subname3}, Grade: ${grade3}` )
-// const vari = (grade1 + grade2 + grade3)/3; 
-// console.log("The average is:",vari.toFixed(2))
-// }
-// const sub1:SubjectGrade = ["Math",30, "EVS", 40 , "SSC", 70] 
-// average(sub1)
+var sub1 = ["Math", 30, "EVS", 40, "SSC", 70];
+average(sub1);
 // Qusestion 3 :
 // type WeatherData = readonly [string, number, string];
 // let cities: any[] = [];
