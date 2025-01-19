@@ -7,7 +7,7 @@ type Student = {
     name: string,
     age: number,
     gender?: string
-    greet: (country: string) => string
+    greet: (country: string) => string  //method call signature
 }
 
 const student1: Student = {
