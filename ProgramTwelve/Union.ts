@@ -29,18 +29,53 @@
 
 
 
-const inputValue = (userValue: string | number | boolean) => {
-    if(typeof userValue === "string"){
-        console.log(userValue[0].toUpperCase() + userValue.slice(1));        
-    }
-    else if(typeof userValue === "number"){
-        console.log("$" + userValue.toFixed(2));
-    }
-    else if(typeof userValue === "boolean"){
-        console.log(userValue === true ? "Yes" : "No");
-    }
+// const inputValue = (userValue: string | number | boolean) => {
+//     if(typeof userValue === "string"){
+//         console.log(userValue[0].toUpperCase() + userValue.slice(1));        
+//     }
+//     else if(typeof userValue === "number"){
+//         console.log("$" + userValue.toFixed(2));
+//     }
+//     else if(typeof userValue === "boolean"){
+//         console.log(userValue === true ? "Yes" : "No");
+//     }
+// }
+
+// inputValue("punit")
+// inputValue(2417)
+// inputValue(true)
+
+
+//Union using objects
+// In union, we have to define every property of atleast one type aliased function and can define one or more property of other type aliased function.
+
+
+type person = {
+    name: string, 
+    age: number
 }
 
-inputValue("punit")
-inputValue(2417)
-inputValue(true)
+type Employee = {
+    id: number,
+    dept: string
+}
+
+type EmployeeDetails = person | Employee
+
+// both are acceptable in UNION
+const employee: EmployeeDetails = {
+    // name: "Punit",
+    age: 22,
+    id: 11212505,
+    dept: "CSE"
+}
+
+const employee1: EmployeeDetails = {
+    name: "Punit",
+    age: 22,
+    id: 11212505,
+    dept: "CSE"
+}
+
+
+//Intersection in TS
