@@ -63,6 +63,6 @@ const displayWeather = (cities: any[]) => {
     let [name, celsius, condition] = city;
     cityInfo.push({ City: name, Temperature: celsius, Condition: condition });
   });
-  console.table(cityInfo);
+  console.table(cityInfo); //console.table() is used to display the data in a tabular format.
 };
 displayWeather(cities)
