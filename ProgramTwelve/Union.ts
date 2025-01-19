@@ -81,17 +81,17 @@
 //Intersection in TS
 //intersection using objects
 
-type person = {
-    name: string, 
-    age: number
-}
+// type person = {
+//     name: string, 
+//     age: number
+// }
 
-type Employee = {
-    id: number,
-    dept: string
-}
+// type Employee = {
+//     id: number,
+//     dept: string
+// }
 
-type EmployeeDetails = person & Employee
+// type EmployeeDetails = person & Employee
 
 //not acceptable in intersection as not all properties are defined
 // const employee: EmployeeDetails = {
@@ -103,9 +103,32 @@ type EmployeeDetails = person & Employee
 
 
 //acceptable in intersection as all properties are defined
-const employee1: EmployeeDetails = {
-    name: "Punit",
-    age: 22,
-    id: 11212505,
-    dept: "CSE"
+// const employee1: EmployeeDetails = {
+//     name: "Punit",
+//     age: 22,
+//     id: 11212505,
+//     dept: "CSE"
+// }
+
+
+//Practice question 
+
+type User = {
+    name: string,
+    age: number
 }
+
+type MyLocation = {
+    city: string,
+    country: string
+}
+
+const user: User = {name: "Punit", age: 22}
+const myLocation: MyLocation = {city: "Hisar", country: "India"}
+
+const completeDetails = (usr: User, loc: MyLocation) => {
+    return {...user, ...myLocation}
+}
+
+const myCompleteDetail: User & MyLocation = completeDetails(user, myLocation)
+console.log(myCompleteDetail);
