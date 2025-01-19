@@ -31,38 +31,38 @@
 // disprod(prod2)
 
 // Question 2:
-type SubjectGrade = [string, number, string, number, string, number];
+// type SubjectGrade = [string, number, string, number, string, number];
 
-const average = (student: SubjectGrade): void => {
-    const [subname1, grade1, subname2, grade2, subname3, grade3] = student;
-    console.log(`Subject name: ${subname1}, Grade: ${grade1}, 
-                Subject name: ${subname2}, Grade: ${grade2}, 
-                Subject name: ${subname3}, Grade: ${grade3}`);
-    const vari = (grade1 + grade2 + grade3) / 3;
-    console.log("The average is:", vari.toFixed(2));
-};
+// const average = (student: SubjectGrade): void => {
+//     const [subname1, grade1, subname2, grade2, subname3, grade3] = student;
+//     console.log(`Subject name: ${subname1}, Grade: ${grade1}, 
+//                 Subject name: ${subname2}, Grade: ${grade2}, 
+//                 Subject name: ${subname3}, Grade: ${grade3}`);
+//     const vari = (grade1 + grade2 + grade3) / 3;
+//     console.log("The average is:", vari.toFixed(2));
+// };
 
-const sub1: SubjectGrade = ["Math", 30, "EVS", 40, "SSC", 70];
+// const sub1: SubjectGrade = ["Math", 30, "EVS", 40, "SSC", 70];
 
-average(sub1);
+// average(sub1);
 
 // Qusestion 3 :
 
-// type WeatherData = readonly [string, number, string];
-// let cities: any[] = [];
+type WeatherData = readonly [string, number, string];
+let cities: any[] = [];
 
-// let city1: WeatherData = ['Surat', 30, 'overcast'];
-// let city2: WeatherData = ['Ahmedabad', 34, 'sunny'];
-// let city3: WeatherData = ['Rajkot', 27, 'rainy'];
+let city1: WeatherData = ['Surat', 30, 'overcast'];
+let city2: WeatherData = ['Ahmedabad', 34, 'sunny'];
+let city3: WeatherData = ['Rajkot', 27, 'rainy'];
 
-// cities.push(city1, city2, city3);
+cities.push(city1, city2, city3);
 
-// const displayWeather = (cities: any[]) => {
-//   let cityInfo: object[] = [];
-//   cities.forEach((city) => {
-//     let [name, celsius, condition] = city;
-//     cityInfo.push({ City: name, Temperature: celsius, Condition: condition });
-//   });
-//   console.table(cityInfo);
-// };
-// displayWeather(cities)
+const displayWeather = (cities: any[]) => {
+  let cityInfo: object[] = [];
+  cities.forEach((city) => {
+    let [name, celsius, condition] = city;
+    cityInfo.push({ City: name, Temperature: celsius, Condition: condition });
+  });
+  console.table(cityInfo);
+};
+displayWeather(cities)
