@@ -29,3 +29,18 @@
 
 
 
+const inputValue = (userValue: string | number | boolean) => {
+    if(typeof userValue === "string"){
+        console.log(userValue[0].toUpperCase() + userValue.slice(1));        
+    }
+    else if(typeof userValue === "number"){
+        console.log("$" + userValue.toFixed(2));
+    }
+    else if(typeof userValue === "boolean"){
+        console.log(userValue === true ? "Yes" : "No");
+    }
+}
+
+inputValue("punit")
+inputValue(2417)
+inputValue(true)
