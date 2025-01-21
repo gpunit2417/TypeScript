@@ -34,13 +34,42 @@ var __extends = (this && this.__extends) || (function () {
 // const personOneDetail: Persons = new Persons("Punit", 22, ["Cricket", "Volleyball"])
 // console.log(personOneDetail);
 // INHERITANCE
+// class Persons {
+//     name: string;
+//     age: number;
+//     hobbies: string[];
+//     constructor(name: string, age: number, hobbies: string[]) {
+//         this.age = age
+//         this.name = name
+//         this.hobbies = hobbies
+//     }
+//     introduce(): string{
+//         return `Hi, I am ${this.name} and my age is ${this.age} with hobbies ${this.hobbies.join(',')}.`
+//     }
+// }
+// class Students extends Persons{
+//     grade: number;
+//     constructor(name: string, age: number, hobbies: string[], grade: number){
+//         super(name, age, hobbies);
+//         this.grade = grade
+//     }
+//     introduce(): string{
+//         return `${super.introduce()}. I am in grade ${this.grade}`
+//     }
+// }
+// const personOneDetail: Persons = new Persons("Punit", 22, ["Cricket", "Volleyball"])
+// const studentOneDetail: Students = new Students("Punit", 22, ["Cricket", "Volleyball"], 10)
+// console.log(personOneDetail.introduce());
+// console.log(studentOneDetail.introduce());
+//ACCESS MODIFIERS 
 var Persons = /** @class */ (function () {
     function Persons(name, age, hobbies) {
         this.age = age;
         this.name = name;
         this.hobbies = hobbies;
     }
-    Persons.prototype.introduce = function () {
+    Persons.prototype.introduceParent = function () {
+        console.log(this.age);
         return "Hi, I am ".concat(this.name, " and my age is ").concat(this.age, " with hobbies ").concat(this.hobbies.join(','), ".");
     };
     return Persons;
@@ -48,16 +77,21 @@ var Persons = /** @class */ (function () {
 var Students = /** @class */ (function (_super) {
     __extends(Students, _super);
     function Students(name, age, hobbies, grade) {
-        var _this = _super.call(this, name, age, hobbies) || this;
+        var _this = _super.call(this, name, age, hobbies) || this; // can use hobbies here despite protected access modifier is used.
         _this.grade = grade;
         return _this;
     }
-    Students.prototype.introduce = function () {
-        return "".concat(_super.prototype.introduce.call(this), ". I am in grade ").concat(this.grade);
+    Students.prototype.introduceChild = function () {
+        console.log(this.hobbies);
+        // console.log(this.age);  //error because age is made private so it can only be used in PARENT class
+        return "".concat(_super.prototype.introduceParent.call(this), ". I am in grade ").concat(this.grade);
     };
     return Students;
 }(Persons));
 var personOneDetail = new Persons("Punit", 22, ["Cricket", "Volleyball"]);
 var studentOneDetail = new Students("Punit", 22, ["Cricket", "Volleyball"], 10);
-console.log(personOneDetail.introduce());
-console.log(studentOneDetail.introduce());
+console.log(personOneDetail.introduceParent());
+console.log(studentOneDetail.introduceChild());
+console.log(personOneDetail.name); //because name is public
+// console.log(personOneDetail.hobbies);   //error because hobbies is protected and can be accessible only in PARENT class and its SUBCLASSES,
+// console.log(personOneDetail.age);   //error because age is made private so it can only be used in PARENT class
