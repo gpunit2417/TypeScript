@@ -115,37 +115,37 @@
 
 // SHORTHAND PROPERTIES FOR CLASSES
 
-class Persons {
+// class Persons {
 
-    constructor(public name: string, private age: number, protected hobbies: string[]) {}
+//     constructor(public name: string, private age: number, protected hobbies: string[]) {}
 
-    introduceParent(): string{
-        console.log(this.age);
+//     introduceParent(): string{
+//         console.log(this.age);
         
-        return `Hi, I am ${this.name} and my age is ${this.age} with hobbies ${this.hobbies.join(',')}.`
-    }
-}
+//         return `Hi, I am ${this.name} and my age is ${this.age} with hobbies ${this.hobbies.join(',')}.`
+//     }
+// }
 
-class Students extends Persons{
+// class Students extends Persons{
 
-    constructor(name: string, age: number, hobbies: string[], public grade: number){
-        super(name, age, hobbies); 
-    }
+//     constructor(name: string, age: number, hobbies: string[], public grade: number){
+//         super(name, age, hobbies); 
+//     }
 
-    introduceChild(): string{
-        console.log(this.hobbies);
-        // console.log(this.age);  //error because age is made private so it can only be used in PARENT class
+//     introduceChild(): string{
+//         console.log(this.hobbies);
+//         // console.log(this.age);  //error because age is made private so it can only be used in PARENT class
         
-        return `${super.introduceParent()}. I am in grade ${this.grade}`
-    }
-}
+//         return `${super.introduceParent()}. I am in grade ${this.grade}`
+//     }
+// }
 
-const personOneDetail: Persons = new Persons("Punit", 22, ["Cricket", "Volleyball"])
-const studentOneDetail: Students = new Students("Punit", 22, ["Cricket", "Volleyball"], 10)
+// const personOneDetail: Persons = new Persons("Punit", 22, ["Cricket", "Volleyball"])
+// const studentOneDetail: Students = new Students("Punit", 22, ["Cricket", "Volleyball"], 10)
 
-console.log(personOneDetail.introduceParent());
-console.log(studentOneDetail.introduceChild());
-console.log(personOneDetail.name);  //because name is public
+// console.log(personOneDetail.introduceParent());
+// console.log(studentOneDetail.introduceChild());
+// console.log(personOneDetail.name);  //because name is public
 
 // console.log(personOneDetail.hobbies);   //error because hobbies is protected and can be accessible only in PARENT class and its SUBCLASSES,
 
