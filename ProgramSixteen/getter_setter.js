@@ -44,7 +44,34 @@ console.log(persons1.age);
 // Instantiate an object of the BankAccount class.
 // Use the setter to set the balance to 1000 and use the getter to display the updated 
 // balance.
+var BankAccount = /** @class */ (function () {
+    function BankAccount() {
+        this._balance = 0;
+    }
+    Object.defineProperty(BankAccount.prototype, "balance", {
+        // constructor(_balance:number){}
+        get: function () {
+            if (this._balance === undefined) {
+                throw new Error("No balance in your account");
+            }
+            return this._balance;
+        },
+        set: function (bal) {
+            if (bal > 0) {
+                this._balance = bal;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return BankAccount;
+}());
+var bankBalance = new BankAccount();
+// bankBalance.balance = 1000
+console.log(bankBalance.balance);
 // Try setting a negative balance using the setter. What output do you expect?
+bankBalance.balance = 200;
+console.log(bankBalance.balance);
 //? Q2: Temperature Converter
 // Define a TypeScript class Temperature with a private property _celsius set to 0.
 // Implement a getter method celsius that returns the temperature in Celsius.

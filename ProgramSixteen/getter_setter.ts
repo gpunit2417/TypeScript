@@ -48,7 +48,35 @@ console.log(persons1.age);
 // Use the setter to set the balance to 1000 and use the getter to display the updated 
 // balance.
 
+class BankAccount{
+    private _balance: number = 0;
+    // constructor(_balance:number){}
+
+    public get balance(){
+        if(this._balance === undefined){
+            throw new Error("No balance in your account")
+        }
+        return this._balance
+    }
+
+    public set balance(bal: number){
+        if(bal > 0){
+            this._balance = bal
+        }
+    }
+}
+
+const bankBalance: BankAccount = new BankAccount();
+
+// bankBalance.balance = 1000
+
+console.log(bankBalance.balance);
+
 // Try setting a negative balance using the setter. What output do you expect?
+
+bankBalance.balance = 200
+console.log(bankBalance.balance);
+
 
 //? Q2: Temperature Converter
 // Define a TypeScript class Temperature with a private property _celsius set to 0.
