@@ -9,6 +9,24 @@
 
 
 
+// class MathOperation{
+//     public static pi: number
+
+//     public static add(num1: number, num2: number){
+//         return num1 + num2
+//     }
+
+//     public static sub(num1: number, num2: number){
+//         return num1 - num2
+//     }
+// }
+
+// console.log(Math.PI);
+// console.log(MathOperation.add(2, 5));
+// console.log(MathOperation.sub(4, 2)); 
+
+//Practice time
+
 class MathOperation{
     public static pi: number
 
@@ -19,9 +37,25 @@ class MathOperation{
     public static sub(num1: number, num2: number){
         return num1 - num2
     }
+
+    public static div(num1: number, num2: number){
+        return num1 / num2
+    }
+
+    public static mul(num1: number, num2: number){
+        return num1 * num2
+    }
+
+    public static rem(num1: number, num2: number){
+        return num1 % num2
+    }
 }
 
 console.log(Math.PI);
 console.log(MathOperation.add(2, 5));
-console.log(MathOperation.sub(4, 2)); 
+console.log(MathOperation.sub(4, 2));
+console.log(MathOperation.div(10, 2));
+console.log(MathOperation.mul(10, 2));
+console.log(MathOperation.rem(10, 2));
+
 
