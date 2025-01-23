@@ -1,10 +1,13 @@
 // In TS, static methods and properties belong to the class itself rather than to instances of the class. By making methods and properties static, we can access them directly from the class without needing to create an instance of the class. This is useful for utility functions or properties that don't rely on instance specific data.
-var Human = /** @class */ (function () {
-    function Human(PI) {
-        this.PI = PI;
+// class Human{
+//     constructor(public PI: number){}
+// }
+// // @ts-ignore
+// const pi:Human = new Human(3.14);
+// console.log(pi);
+var MathOperation = /** @class */ (function () {
+    function MathOperation() {
     }
-    return Human;
+    return MathOperation;
 }());
-// @ts-ignore
-var pi = new Human(3.14);
-console.log(pi);
+console.log(Math.PI);

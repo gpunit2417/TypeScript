@@ -9,3 +9,18 @@
 
 
 
+class MathOperation{
+    public static pi: number
+
+    public static add(num1: number, num2: number){
+        return num1 + num2
+    }
+
+    public static sub(num1: number, num2: number){
+        return num1 - num2
+    }
+}
+
+console.log(Math.PI);
+console.log(MathOperation.add(2, 5));
+
