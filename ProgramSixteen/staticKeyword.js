@@ -8,6 +8,14 @@
 var MathOperation = /** @class */ (function () {
     function MathOperation() {
     }
+    MathOperation.add = function (num1, num2) {
+        return num1 + num2;
+    };
+    MathOperation.sub = function (num1, num2) {
+        return num1 - num2;
+    };
     return MathOperation;
 }());
 console.log(Math.PI);
+console.log(MathOperation.add(2, 5));
+console.log(MathOperation.sub(4, 2));
